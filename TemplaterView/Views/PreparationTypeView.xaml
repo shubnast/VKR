@@ -1,0 +1,77 @@
+﻿<Window x:Class="TemplaterView.Views.PreparationTypeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TemplaterView.Views" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:cal="http://caliburnmicro.com"
+        mc:Ignorable="d"
+        Title="Типы подготовки"
+        Height="600" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cal:ActionMessage MethodName="Initialize"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.3*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.7*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Margin="5" Grid.Row="0">Наименование</Label>
+                    <Label Margin="5" Grid.Row="1">Период от</Label>
+                    <Label Margin="5" Grid.Row="2">Период до</Label>
+                    <Label Margin="5" Grid.Row="3">Для отчета</Label>
+                    <TextBox x:Name="Title"  Height="25" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0" Margin="5"></TextBox>
+                    <DatePicker x:Name="From"  Height="25" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Margin="5"></DatePicker>
+                    <DatePicker x:Name="To"  Height="25" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" Margin="5"></DatePicker>
+                    <TextBox x:Name="ReportTitle"  Height="25" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" Margin="5"></TextBox>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button VerticalAlignment="Bottom" Margin="5" Height="30" Grid.Column="0" x:Name="CreateNewData" IsEnabled="{Binding IsCreateEnabled}">Создать</Button>
+                    <Button VerticalAlignment="Bottom" Margin="5" Height="30" Grid.Column="1" x:Name="SaveData" IsEnabled="{Binding IsEditEnabled}">Сохранить</Button>
+                    <Button VerticalAlignment="Bottom" Margin="5" Height="30" Grid.Column="2" x:Name="DeleteData" IsEnabled="{Binding IsDeleteEnabled}">Удалить</Button>
+                </Grid>
+                <Label Grid.Row="0" VerticalAlignment="Center" Margin="10">Типы подготовки</Label>
+            </Grid>
+            <ListView x:Name="ListViewCollection" Grid.Column="1" SelectedItem="{Binding SelectedItem}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <cal:ActionMessage MethodName="ItemSelected"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Title}"  Width="125">Наименование</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding PreparationPeriod}" Width="150">Период</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding ReportTitle}" Width="175">Наименование (для отчета)</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>

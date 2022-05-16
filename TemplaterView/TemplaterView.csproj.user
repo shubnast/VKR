@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Astorius\Desktop\Templater\TemplaterView\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\CourseView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DepartamentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\GroupView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LecturerGroupView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PreparationTypeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ReportView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SettingsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\StudentGroupView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SubjectView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TemplateView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TrainingDirectionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\CourseView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DepartamentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GroupView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LecturerGroupView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PreparationTypeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ReportView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SettingsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\StudentGroupView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SubjectView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TemplateView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TemplateWindowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TrainingDirectionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

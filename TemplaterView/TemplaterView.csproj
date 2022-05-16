@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\add.png" />
+    <None Remove="Views\close.png" />
+    <None Remove="Views\edit.png" />
+    <None Remove="Views\print.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="4.0.173" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataBaseProvider\DataBaseProvider.csproj" />
+    <ProjectReference Include="..\ReportCreator\ReportCreator.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\add.png" />
+    <Resource Include="Views\close.png" />
+    <Resource Include="Views\edit.png" />
+    <Resource Include="Views\print.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Icons.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

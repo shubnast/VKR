@@ -1,0 +1,201 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Astorius\\Desktop\\Templater\\TemplaterView\\TemplaterView.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Astorius\\Desktop\\Templater\\DataBaseProvider\\DataBaseProvider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Astorius\\Desktop\\Templater\\DataBaseProvider\\DataBaseProvider.csproj",
+        "projectName": "DataBaseProvider",
+        "projectPath": "C:\\Users\\Astorius\\Desktop\\Templater\\DataBaseProvider\\DataBaseProvider.csproj",
+        "packagesPath": "C:\\Users\\Astorius\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Astorius\\Desktop\\Templater\\DataBaseProvider\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Astorius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Coreopsis\\NuPKG": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Astorius\\Desktop\\Templater\\ReportCreator\\ReportCreator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Astorius\\Desktop\\Templater\\ReportCreator\\ReportCreator.csproj",
+        "projectName": "ReportCreator",
+        "projectPath": "C:\\Users\\Astorius\\Desktop\\Templater\\ReportCreator\\ReportCreator.csproj",
+        "packagesPath": "C:\\Users\\Astorius\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Astorius\\Desktop\\Templater\\ReportCreator\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Astorius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Coreopsis\\NuPKG": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "TemplateEngine.Docx": {
+              "target": "Package",
+              "version": "[1.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Astorius\\Desktop\\Templater\\TemplaterView\\TemplaterView.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Astorius\\Desktop\\Templater\\TemplaterView\\TemplaterView.csproj",
+        "projectName": "TemplaterView",
+        "projectPath": "C:\\Users\\Astorius\\Desktop\\Templater\\TemplaterView\\TemplaterView.csproj",
+        "packagesPath": "C:\\Users\\Astorius\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Astorius\\Desktop\\Templater\\TemplaterView\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Astorius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Coreopsis\\NuPKG": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Astorius\\Desktop\\Templater\\DataBaseProvider\\DataBaseProvider.csproj": {
+                "projectPath": "C:\\Users\\Astorius\\Desktop\\Templater\\DataBaseProvider\\DataBaseProvider.csproj"
+              },
+              "C:\\Users\\Astorius\\Desktop\\Templater\\ReportCreator\\ReportCreator.csproj": {
+                "projectPath": "C:\\Users\\Astorius\\Desktop\\Templater\\ReportCreator\\ReportCreator.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Caliburn.Micro": {
+              "target": "Package",
+              "version": "[4.0.173, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

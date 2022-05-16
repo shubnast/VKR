@@ -1,0 +1,106 @@
+﻿<Window x:Class="TemplaterView.Views.TemplateWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:cal="http://caliburnmicro.com"
+        mc:Ignorable="d"
+        Title="Шаблонизатор"
+        WindowStartupLocation="CenterScreen"
+        Height="450"
+        Width="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cal:ActionMessage MethodName="Initialize"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid x:Name="MainRoot">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name ="First" Height="20"/>
+                <RowDefinition x:Name="Second" Height="30"/>
+                <RowDefinition x:Name ="Third"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Menu Grid.Row="0" Grid.Column="0" Height="20" VerticalAlignment="Top">
+                <MenuItem Header="Файл">
+                    <MenuItem x:Name="ExitMenuClick" Header="Выход"/>
+                </MenuItem>
+                <MenuItem Header="Объект">
+                    <MenuItem x:Name="SubjectMenuClick" Header="Персона"/>
+                    <MenuItem x:Name="CourseMenuClick" Header="Курс"/>
+                    <MenuItem x:Name="DepartamentMenuClick" Header="Кафедра"/>
+                    <MenuItem x:Name="TrainingDirectionMenuClick" Header="Направление подготовки"/>
+                    <MenuItem x:Name="PreparationTypeMenuClick" Header="Тип подготовик (обучения)"/>
+                </MenuItem>
+                <MenuItem Header="Закрепления">
+                    <MenuItem x:Name="GroupMenuClick" Header="Группа"/>
+                    <MenuItem x:Name="StudentGroupMenuClick" Header="Студент за группой"/>
+                    <MenuItem x:Name="LecturerGroupMenuClick" Header="Преподаватель за группой"/>
+                </MenuItem>
+                <MenuItem Header="Настройки">
+                    <MenuItem x:Name="TemplateMenuClick" Header="Шаблоны"/>
+                    <MenuItem x:Name="SettingsMenuClick" Header="Константы"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Button x:Name="btnCreate" Grid.Row="1" Margin="3" Width="30" HorizontalAlignment="Left">
+                    <Button.Background>
+                        <ImageBrush  Stretch="UniformToFill" ImageSource="/Views/add.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button  x:Name="btnEdit" Grid.Row="1" Margin="3" Width="30" HorizontalAlignment="Left">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Views/edit.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button x:Name="btnDelete" Grid.Row="1" Margin="3" Width="30" HorizontalAlignment="Left">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Views/close.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnPrint" Grid.Row="1" Margin="3" Width="30" HorizontalAlignment="Left">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Views/print.png"/>
+                    </Button.Background>
+                </Button>
+                <Label>Печать по группе</Label>
+                <ComboBox x:Name="ListBoxCollection" SelectedItem="{Binding  SelectedGroupItem}" Width="100" Margin="3">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <ListView x:Name="ListViewCollection" Grid.Column="1" Grid.Row="2"  SelectedItem="{Binding SelectedItem}" SelectionMode="Extended">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <cal:ActionMessage MethodName="ItemSelected"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                <ListView.Resources>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Setter Property="IsSelected" Value="{Binding SomeItemSelected, Mode=TwoWay}" />
+                    </Style>
+                </ListView.Resources>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Student}"  Width="100">Студент</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Group}"  Width="100">Группа</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Course}"  Width="100">Курс</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Departament}"  Width="100">Кафедра</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding TrainingDirection}"  Width="280">Направление подготовки (Специальность)</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding PreparationTypeReport}"  Width="280">Тип подготовки (обучение или практика)</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding PreparationPeriod}"  Width="100">Период</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>
